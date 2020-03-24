@@ -1,0 +1,17 @@
+公司通讯录，可以录入公司成员的基本信息，基本信息包括姓名，性别，职位，电话，邮箱，住址，学历，毕业院校，个人简介等
+通讯录主体分两个板块，主板块是公司成员信息展示，展示内容包括姓名、职业、电话，有搜索功能，可以根据姓名、职位、电话搜索到成员，打开详情可以看到该成员的所有基本信息，
+可以添加公司成员以及对公司成员的基本信息进行修改；副板块是公司简介，包括公司的基本信息以及各职位的基本职责
+
+用json-server搭建本地数据接口，来存放数据，以便后面调用  
+1.安装全局的json-server：cnpm install -g json-server
+2.在桌面上创建一个vue/JSONSERVER文件夹：cd Desktop/vue/JSONSERVER/引到当前文件夹路径，然后cnpm init（--yes）初始化
+3.初始化完成后JSONSERVER中会出现一个package.json文件，cnpm install json-server --save，下载到当前项目中（package.json中会出现一个依赖dependencies）
+4.将package.json中script的类更换为"json:server":"json-server --watch db.json"
+5.在JSONSERVER中创建db.json文件，db.json就是我们即将用来存放本地数据的数据库
+6.使用cnpm run json:server就可以启动项目，获得一个3000的端口可以在浏览器中打开
+
+用vue-cli脚手架搭建vue开发环境
+1.全局安装vue-cli：cnpm install --global vue-cli（必须先下载node还有webpack还有镜像cnpm）
+2.在桌面上创建Projects文件夹，然后cd到当前文件夹：cd Desktop/Projects/，在此路径下创建一个基于webpack模板的新项目：vue init webpack vcustomers(vcustomers为项目名，可自行设定)
+3.默认配置创建完成之后进入vcustomers路径：cnpm install 自动创建项目环境，还可以引入router模块和http模块
+
